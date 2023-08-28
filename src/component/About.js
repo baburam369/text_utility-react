@@ -23,23 +23,19 @@ export default function About(props) {
   //         setBtnTxt("Enable Dark Mode");
   //     }
   // }
+  let myStyle = {
+    color: props.mode === "dark" ? "white" : "black",
+    backgroundColor : props.mode === "dark" ? "#242536" : "#aeb0b3"
+  }
   return (
     <>
       <div
         className="container"
-        style={{ color: props.mode === "dark" ? "white" : "black" }}
+        style={{ color: props.mode === "dark" ? "white" : "black",}}
       >
-        <h1>About Us</h1> <br />
-        <p>
-          TextUtils is a text utility app to control text behaviour and make
-          changes to the text that is entered.
-        </p>
-        <br />
-        <br />
-        <h3>Developed By</h3>
-        <p>Baburam Upadhaya, with the help of Youtube Tutorials</p>
-        {/* <h2>About Us</h2>
-        <div className="accordion" id="accordionExample">
+       
+        <h2>About Us</h2>
+        <div className="accordion"  id="accordionExample">
           <div className="accordion-item">
             <h2 className="accordion-header">
               <button
@@ -51,28 +47,21 @@ export default function About(props) {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Accordion Item #1
+                <strong>Text analysing features</strong>
               </button>
             </h2>
-            <div
+            <div  style={myStyle}
               id="collapseOne"
               className="accordion-collapse collapse show"
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body" style={myStyle}>
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+               Textutils gives you the ability to perform various function with your text. 
+               Be it word count, converting text to same case, etc.
               </div>
             </div>
           </div>
-          <div className="accordion-item" >
+          <div  style={myStyle} className="accordion-item" >
             <h2 className="accordion-header" >
               <button
                 className="accordion-button collapsed"
@@ -83,7 +72,7 @@ export default function About(props) {
                 aria-controls="collapseTwo"
                 style={myStyle}
               >
-                Accordion Item #2
+              <strong>Free and easy to use</strong> 
               </button>
             </h2>
             <div
@@ -91,16 +80,11 @@ export default function About(props) {
               className="accordion-collapse collapse"
               data-bs-parent="#accordionExample"
             >
-              <div className="accordion-body" style={myStyle}>
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+              <div className="accordion-body" >
+                Textutils is a free character count tool that provides instant character count and word count
+                for a given text. Also, it is packed with many other features like conversion of text to
+                UPPERCASE, lowercase, Title Case, etc. It is mostly suitable for writing text with word/character
+                limit.
               </div>
             </div>
           </div>
@@ -115,7 +99,7 @@ export default function About(props) {
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                Accordion Item #3
+               <strong>Browser Compatibility</strong> 
               </button>
             </h2>
             <div
@@ -124,22 +108,12 @@ export default function About(props) {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body" style={myStyle}>
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                Textutils works for most of the desktop/PC browser and all mobile browser. 
+                Although some mobile browsers does not support some of the features.
               </div>
             </div>
           </div>
         </div>
-        <div className="containier my-3">
-            <button className="btn btn-primary my-3" onClick = {toggleStyle} >{btnTxt}</button>
-        </div> */}
       </div>
     </>
   );
